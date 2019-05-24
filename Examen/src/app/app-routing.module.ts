@@ -5,6 +5,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },  { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' },
+  { path: 'olvido-c', loadChildren: './olvido-c/olvido-c.module#OlvidoCPageModule' },
 
 
 ];
