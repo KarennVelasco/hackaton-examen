@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
 import { ActivatedRoute, Router  } from '@angular/router';
 import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
@@ -15,7 +16,7 @@ export class RegistroPage implements OnInit {
   registroForm: FormGroup
   constructor(public api: RestApiService,
     public loadingController: LoadingController,private route: ActivatedRoute,
-    public router: Router, private formBuilder: FormBuilder) {
+    public router: Router, private formBuilder: FormBuilder, private navCtrl:NavController) {
       this.registroForm = new FormGroup({
         name: new FormControl(), last_name: new FormControl(), mothers_last_name: new FormControl(), email: new FormControl(),
         matricula: new FormControl(), tipo: new FormControl(), password: new FormControl()
@@ -36,4 +37,8 @@ export class RegistroPage implements OnInit {
       });
   }
 
+  iniciar(){
+    this.navCtrl.navigateForward('login');
+  }
+  
 }
