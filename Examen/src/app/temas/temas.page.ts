@@ -9,7 +9,10 @@ export class TemasPage implements OnInit {
 
   constructor() { }
 
+  temas = []
+
   ngOnInit() {
+    this.temas.push({"id": 1, "name":"Sumas","subject":{"id":1,"name":"Matematicas"}});
   }
 
 }
