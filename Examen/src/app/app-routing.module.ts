@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' },
@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'escuelas', loadChildren: './escuelas/escuelas.module#EscuelasPageModule' },
   { path: 'temas', loadChildren: './temas/temas.module#TemasPageModule' },
   { path: 'grupos', loadChildren: './grupos/grupos.module#GruposPageModule' },
-  { path: 'periodos', loadChildren: './periodos/periodos.module#PeriodosPageModule' }
+  { path: 'periodos', loadChildren: './periodos/periodos.module#PeriodosPageModule' },
   { path: 'examen-alumnos', loadChildren: './examen-alumnos/examen-alumnos.module#ExamenAlumnosPageModule' },
   { path: 'indexmateria', loadChildren: './indexmateria/indexmateria.module#IndexmateriaPageModule' }
 ];
