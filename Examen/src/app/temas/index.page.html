@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>temas</ion-title>
+    </ion-toolbar>
+</ion-header>
+  
+<ion-content>
+    <ion-list >
+        <ion-list-header>
+            <ion-label>Nombre</ion-label>
+            <ion-label>Materia</ion-label>
+        </ion-list-header>
+        <ion-item *ngFor="let tema of temas">
+            {{tema.nombre}}
+            {{tema.materia.id}}
+        </ion-item>
+            <!-- <ion-option *ngFor="let respuesta of pregunta">{{respuesta.respuestas}}</ion-option> -->
+      </ion-list>
+      
+    
+      <ion-button>
+          Enviar
+        </ion-button>
+</ion-content>
