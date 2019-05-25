@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>examen_alumnos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="Cuestionario">
+    <ion-list >
+        <ion-item *ngFor="let pregunta of preguntas">
+            Pregunta: {{pregunta.pregunta}} <br>
+
+
+            <ion-list>
+                <ion-radio-group>
+
+                    <ion-item *ngFor="let respuesta of pregunta.respuestas">
+                      
+                      <ion-label>{{respuesta}}</ion-label>
+                      <ion-radio slot="start" value="{{respuesta}}"></ion-radio>
+                    </ion-item>
+
+                </ion-radio-group>
+              </ion-list>
+
+        </ion-item>
+            <!-- <ion-option *ngFor="let respuesta of pregunta">{{respuesta.respuestas}}</ion-option> -->
+      </ion-list>
+      
+  
+      <ion-button>
+          Enviar
+        </ion-button>
+  </div>
+</ion-content>
