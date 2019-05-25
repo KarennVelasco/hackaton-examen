@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'escuelas', loadChildren: './escuelas/escuelas.module#EscuelasPageModule' },
   { path: 'temas', loadChildren: './temas/temas.module#TemasPageModule' },
   { path: 'grupos', loadChildren: './grupos/grupos.module#GruposPageModule' },
-  { path: 'periodos', loadChildren: './periodos/periodos.module#PeriodosPageModule' }
+  { path: 'periodos', loadChildren: './periodos/periodos.module#PeriodosPageModule' },
   { path: 'examen-alumnos', loadChildren: './examen-alumnos/examen-alumnos.module#ExamenAlumnosPageModule' },
   { path: 'indexmateria', loadChildren: './indexmateria/indexmateria.module#IndexmateriaPageModule' }
 ];
