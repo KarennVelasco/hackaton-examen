@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar ubicación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="locationForm">
+    <ion-item>
+      <ion-input type="text" formControlName="name" placeholder="Nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" formControlName="description" placeholder="Descripción"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="number" formControlName="lat" placeholder="Latitud"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="number" formControlName="lng" placeholder="Longitud"></ion-input>
+    </ion-item>
+    <ion-button color="primary" type="submit" (click)="saveLocation()">Guardar</ion-button>
+    <ion-button color="secondary">Cancelar</ion-button>
+  </form>
+</ion-content>

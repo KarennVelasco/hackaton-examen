@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>registro</ion-title>
+    <ion-title>Registrate</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -15,64 +15,66 @@
           <div class="col-lg-7">
             <div class="p-5">
               <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                <h1 class="h4 text-gray-900 mb-4">Reg&iacute;strate</h1>
               </div>
-              <form class="user">
+              <form [formGroup]="registroForm">
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="Nombre">
+                    <input type="text" class="form-control form-control-user" formControlName="name" id="nombre" placeholder="Nombre">
                   </div>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Apellido Paterno">
-                  </div>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Apellido Materno">
-                  </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email">
-                  </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Matricula">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" class="form-control form-control-user" formControlName="last_name" id="apeMat" placeholder="Apellido Paterno">
                   </div>
                 </div>
                 
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                    <input type="text" class="form-control form-control-user" formControlName="mothers_last_name" id="apellidoMat" placeholder="Apellido Materno">
+                  </div>
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" class="form-control form-control-user" formControlName="matricula" id="matricula" placeholder="Matricula">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <input type="email" class="form-control form-control-user" formControlName="email" id="exampleInputEmail" placeholder="Correo Electronico">
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="password" class="form-control form-control-user" formControlName="password" id="exampleInputPassword" placeholder="Contraseña">
                   </div>
                   <div class="col-sm-6">
-                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
+                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repetir contraseña">
                   </div>
+                </div>
+                <div class="form-group row">
                   <div class="col-sm-6">
-                    <select name="tipolist" form="carform">
+                    <select formControlName="tipo" form="carform" class="form-control">
                       <option value="maestro">Maestro</option>
                       <option value="alumno">Alumno</option>
-                      <option value="coordinador">Coordinador</option>
                       <option value="director">Director</option>
                     </select>
                   </div>
-                  
-                  
                 </div>
-                <a href="login.html" class="btn btn-primary btn-user btn-block">
-                  Register Account
-                </a>
+                <ion-button type="submit" (click)="registrar() ">
+                  Registrarme
+                </ion-button>
                 <hr>
                
               </form>
               <hr>
               <div class="text-center">
-                <a class="small" href="forgot-password.html">Forgot Password?</a>
+                <a class="small" href="forgot-password.html">Olvide mi contraseña</a>
               </div>
               <div class="text-center">
-                <a class="small" href="login.html">Already have an account? Login!</a>
+                <a class="small" href="login.html">¡Ya tengo una cuenta! Iniciar Sesion</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 
   <!-- Bootstrap core JavaScript-->
