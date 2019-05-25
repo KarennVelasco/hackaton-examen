@@ -8,7 +8,8 @@ const routes: Routes = [
   { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' },
   { path: 'olvido-c', loadChildren: './olvido-c/olvido-c.module#OlvidoCPageModule' },
   { path: 'add-map', loadChildren: './add-map/add-map.module#AddMapPageModule' },
-  { path: 'formularioexamen', loadChildren: './formularioexamen/formularioexamen.module#FormularioexamenPageModule' }
+  { path: 'formularioexamen', loadChildren: './formularioexamen/formularioexamen.module#FormularioexamenPageModule' },
+  { path: 'examen-alumnos', loadChildren: './examen-alumnos/examen-alumnos.module#ExamenAlumnosPageModule' }
 ];
   
 
