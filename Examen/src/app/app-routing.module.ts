@@ -12,7 +12,10 @@ const routes: Routes = [
   { path: 'examen-alumnos', loadChildren: './examen-alumnos/examen-alumnos.module#ExamenAlumnosPageModule' },
   { path: 'materias', loadChildren: './materias/materias.module#MateriasPageModule' },
   { path: 'escuelas', loadChildren: './escuelas/escuelas.module#EscuelasPageModule' },
+
   { path: 'temas', loadChildren: './temas/temas.module#TemasPageModule' },
+  { path: 'temas/create', loadChildren: './temas/temas.module#TemasPageModule' },
+
   { path: 'grupos', loadChildren: './grupos/grupos.module#GruposPageModule' },
   { path: 'periodos', loadChildren: './periodos/periodos.module#PeriodosPageModule' },
   { path: 'examen-alumnos', loadChildren: './examen-alumnos/examen-alumnos.module#ExamenAlumnosPageModule' },
