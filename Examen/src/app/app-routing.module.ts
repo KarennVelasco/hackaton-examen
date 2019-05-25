@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },  { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule' },
   { path: 'olvido-c', loadChildren: './olvido-c/olvido-c.module#OlvidoCPageModule' },
+  { path: 'formularioexamen', loadChildren: './formularioexamen/formularioexamen.module#FormularioexamenPageModule' },
 
 
 ];
