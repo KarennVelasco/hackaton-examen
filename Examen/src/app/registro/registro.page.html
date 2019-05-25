@@ -57,18 +57,19 @@
                     </select>
                   </div>
                 </div>
-                <ion-button type="submit" (click)="registrar() ">
-                  Registrarme
-                </ion-button>
-                <hr>
+                <div class="text-center">
+                  <ion-button type="submit" (click)="registrar() ">
+                    Registrarme
+                  </ion-button>
+                </div>
                
               </form>
               <hr>
-              <div class="text-center">
+              <!--div class="text-center">
                 <a class="small" href="forgot-password.html">Olvide mi contraseña</a>
-              </div>
+              </div-->
               <div class="text-center">
-                <a class="small" href="login.html">¡Ya tengo una cuenta! Iniciar Sesion</a>
+                <a class="small" (click)="iniciar()">¡Ya tengo una cuenta! Iniciar Sesion</a>
               </div>
             </div>
           </div>

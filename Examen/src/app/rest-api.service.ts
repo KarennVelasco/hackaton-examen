@@ -27,6 +27,13 @@ export class RestApiService {
     );
   }
 
+  public ingresar(user: User): Observable<any>{
+    const url = `${apiUrl}login` 
+    return this.http.post(url, user, httpOptions).pipe(
+      map(this.extractData), catchError(this.handleError)
+    );
+  }
+
   public getLocations(): Observable<any> {
     return this.http.get(apiUrl, httpOptions).pipe(
       map(this.extractData), catchError(this.handleError)
