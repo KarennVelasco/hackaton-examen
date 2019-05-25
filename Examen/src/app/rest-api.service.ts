@@ -5,8 +5,9 @@ import { catchError, tap, map } from "rxjs/operators";
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
 const httpOptions = {
-  headers: new HttpHeaders({'Content-Type': 'application/json'})
+  headers: new HttpHeaders({'Content-type': 'application/json', 'withCredentials':'true'})
 };
+
 const apiUrl:string = "http://192.168.43.198:3000/";
 @Injectable({
   providedIn: 'root'
@@ -21,7 +22,7 @@ export class RestApiService {
 
   public registrar(user: User): Observable<any>{
     const url = `${apiUrl}signup` 
-    return this.http.post(url, httpOptions).pipe(
+    return this.http.post(url, user, httpOptions).pipe(
       map(this.extractData), catchError(this.handleError)
     );
   }
